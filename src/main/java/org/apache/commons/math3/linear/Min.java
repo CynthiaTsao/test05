@@ -132,8 +132,8 @@ public class Min extends AbstractStorelessUnivariateStatistic implements Seriali
     throws MathIllegalArgumentException {
         double min = Double.NaN;
         if (test(values, begin, length)) {
-            //min = values[begin];
-        	min = 0;
+            min = values[begin];
+        	//min = 0;
             for (int i = begin; i < begin + length; i++) {
                 if (!Double.isNaN(values[i])) {
                     min = (min < values[i]) ? min : values[i];
